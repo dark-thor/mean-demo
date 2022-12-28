@@ -1,0 +1,14 @@
+{
+  "name": "atv",
+  "version": "1.0.0",
+  "description": "Antariksh",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Uday Kiran",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
