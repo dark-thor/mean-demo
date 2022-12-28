@@ -1,37 +1,37 @@
-const math = require('./math')
+const math = require("./math");
 
-console.log(math.sum(2,3));
-console.log(math.diff(2,3));
+console.log(math.sum(2, 3));
+console.log(math.diff(2, 3));
 
-const EventEmitter = require('events');
+const EventEmitter = require("events");
 const eventEmitter = new EventEmitter();
 
-eventEmitter.on('math', (num1, num2)=>{
-    console.log("Event occurred" + (num1 + num2));
+eventEmitter.on("math", (num1, num2) => {
+  console.log("Event occurred: " + (num1 + num2));
 });
 
-eventEmitter.emit('math', 1, 2);
+eventEmitter.emit("math", 1, 2);
 
 class Person extends EventEmitter {
-    constructor(name) {
-        super();
-        this._name = name;
-    }
+  constructor(name) {
+    super();
+    this._name = name;
+  }
 
-    get name() {
-        return this._name;
-    }
+  get name() {
+    return this._name;
+  }
 }
 
 let p = new Person("Pedro");
 
-p.on('name', ()=> {
-    console.log("My name: " + p.name);
-})
+p.on("name", () => {
+  console.log("My name: " + p.name);
+});
 
 p.emit("name");
 
-const fs = require('fs');
+const fs = require("fs");
 
 // fs.writeFile('./out.txt', "This is data.", (err)=>{
 //     if(err) {
@@ -88,8 +88,6 @@ const fs = require('fs');
 //     }
 // })
 
-
-
 /*
 const readline = require('readline');
 
@@ -122,4 +120,3 @@ rl.on('close', ()=>{
 });
 
 */
-
